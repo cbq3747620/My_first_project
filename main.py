@@ -14,9 +14,9 @@ def login_system():    #输入用户名密码登录系统
     nc_element=browser.find_element_by_css_selector('#_easyui_tree_143 > span:nth-child(4)')
     nc_element.click()
     user_element=browser.find_element_by_css_selector('.top > div:nth-child(2) > div:nth-child(1) > span:nth-child(2) > input:nth-child(1)')
-    user_element.send_keys('Username')#输入用户名
+    user_element.send_keys('liankeyu')#输入用户名
     psw_element=browser.find_element_by_css_selector('.top > div:nth-child(3) > div:nth-child(1) > span:nth-child(2) > input:nth-child(1)')
-    psw_element.send_keys('pswd')#输入密码
+    psw_element.send_keys('123456')#输入密码
     login_element=browser.find_element_by_css_selector('#login')
     login_element.click()
 def turn2Dgzzjl():#进入稻谷种植记录
@@ -34,8 +34,9 @@ def FillTheForm():
     #填写表单
     time.sleep(2)
     browser.find_element_by_css_selector('#datagrid-row-r1-2-'+I+' > td:nth-child(2) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > span:nth-child(2) > span:nth-child(1) > a:nth-child(1)').click()
+    time.sleep(1)
     browser.find_element_by_css_selector('.tree-hit').click()
-    time.sleep(5)
+    time.sleep(3)
     #根据人名排序选择点击人名
     zzh=browser.find_element_by_css_selector('div.combo-p:nth-child(9) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(1) > ul:nth-child(2) > li:nth-child('+zzhf+')')
     zzh.click()#根据人名排列顺序index（从1到最后）
@@ -58,9 +59,9 @@ def FillTheForm():
     #填入种子来源
     zhongzilaiyuan=browser.find_element_by_css_selector('#datagrid-row-r1-2-'+I+' > td:nth-child(10) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > span:nth-child(2) > span:nth-child(1) > a:nth-child(1)')
     zhongzilaiyuan.click()
-    time.sleep(1)
+    time.sleep(2)
     #种子来源选择倒数第二项
-    zhongzigongsi=browser.find_element_by_css_selector('#_easyui_tree_53')
+    zhongzigongsi=browser.find_element_by_css_selector('div.panel:nth-child(13) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(23)')#里面的2就是第二项
     zhongzigongsi.click()
     time.sleep(2)
     if K==1:
