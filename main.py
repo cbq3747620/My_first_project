@@ -16,7 +16,7 @@ def login_system():    #输入用户名密码登录系统
     user_element=browser.find_element_by_css_selector('.top > div:nth-child(2) > div:nth-child(1) > span:nth-child(2) > input:nth-child(1)')
     user_element.send_keys('liankeyu')#输入用户名
     psw_element=browser.find_element_by_css_selector('.top > div:nth-child(3) > div:nth-child(1) > span:nth-child(2) > input:nth-child(1)')
-    psw_element.send_keys('123456')#输入密码
+    psw_element.send_keys('xxxxxx')#输入密码
     login_element=browser.find_element_by_css_selector('#login')
     login_element.click()
 def turn2Dgzzjl():#进入稻谷种植记录
